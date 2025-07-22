@@ -1,0 +1,70 @@
+    header p {
+      font-size: 1.2em;
+      color: #9e7540;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fffaf0; /* Light warm background */
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(125, 84, 44, 0.1);
+    }
+
+    h2 {
+      color: #7f5539;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-left: 5px solid #b08968;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    ul li {
+      padding: 6px 0;
+    }
+
+    ul li::before {
+      content: "🌟 ";
+      margin-right: 5px;
+    }
+
+    .skills ul li::before {
+      content: "🛠️ ";
+    }
+
+    .github-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .github-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #7f5539;
+      color: #fffaf0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .github-link a:hover {
+      background-color: #5c3d2e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 0.9em;
+      color: #8d6e63;
+    }
+
+    footer span {
+      color: #7f5539;
+    }
