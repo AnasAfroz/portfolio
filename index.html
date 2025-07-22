@@ -1,0 +1,126 @@
+
+    header p {
+      font-size: 1.2em;
+      color: #9e7540;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fffaf0; /* Light warm background */
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(125, 84, 44, 0.1);
+    }
+
+    h2 {
+      color: #7f5539;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-left: 5px solid #b08968;
+      padding-left: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+
+    ul li {
+      padding: 6px 0;
+    }
+
+    ul li::before {
+      content: "🌟 ";
+      margin-right: 5px;
+    }
+
+    .skills ul li::before {
+      content: "🛠️ ";
+    }
+
+    .github-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .github-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #7f5539;
+      color: #fffaf0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .github-link a:hover {
+      background-color: #5c3d2e;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 0.9em;
+      color: #8d6e63;
+    }
+
+    footer span {
+      color: #7f5539;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Anas is Dev</h1>
+    <p>14-year-old Web Developer 🚀</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>Hi! I'm <strong>Anas Afroz</strong>, a 14-year-old developer who loves playing chess, watching Marvel movies, and gaming on PC. I enjoy building websites and learning cool stuff in web development. 🌐</p>
+  </section>
+
+  <section class="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML 🧱</li>
+      <li>CSS 🎨</li>
+      <li>Python 🐍</li>
+      <li>C++ ⚙️</li>
+    </ul>
+  </section>
+
+  <section class="interests">
+    <h2>My Interests</h2>
+    <ul>
+      <li>Marvel Movies 🎥</li>
+      <li>PC Gaming 🎮</li>
+      <li>Web Development 💻</li>
+      <li>Chess ♟️</li>
+      <li>Creating Cool Projects 🛠️</li>
+    </ul>
+  </section>
+
+  <section class="goals">
+    <h2>My Goals</h2>
+    <p>My goal is to become a <strong>backend developer</strong> and master technologies like Node.js, Express, and databases. I want to build powerful and secure web applications. 📊🤖</p>
+  </section>
+
+  <div class="github-link">
+    <h2>🌐 My GitHub</h2>
+    <a href="https://github.com/AnasAfroz" target="_blank">Visit My GitHub</a>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Anas Afroz | Thanks for visiting! © <span id="year"></span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
