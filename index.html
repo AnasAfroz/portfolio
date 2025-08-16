@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -6,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Anas Afroz | Developer</title>
+
+  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
       theme: {
@@ -37,7 +38,11 @@
       },
     };
   </script>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
   <style>
     body { font-family: 'Inter', ui-sans-serif, system-ui; }
     h1, h2, h3, .font-display { font-family: 'Poppins', ui-sans-serif, system-ui; }
@@ -49,6 +54,50 @@
       border-radius: 1.5rem;
       border: 1.5px solid rgba(255,255,255,0.18);
     }
+
+    /* Additional Custom CSS */
+    header p {
+      font-size: 1.2em;
+      color: #9e7540;
+    }
+    section.custom {
+      max-width: 800px;
+      margin: 30px auto;
+      background: #fffaf0;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(125, 84, 44, 0.1);
+    }
+    section.custom h2 {
+      color: #7f5539;
+      margin-bottom: 15px;
+      font-size: 1.5em;
+      border-left: 5px solid #b08968;
+      padding-left: 10px;
+    }
+    ul { list-style: none; padding-left: 10px; }
+    ul li { padding: 6px 0; }
+    ul li::before { content: "🌟 "; margin-right: 5px; }
+    .skills ul li::before { content: "🛠️ "; }
+    .github-link { text-align: center; margin-top: 20px; }
+    .github-link a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #7f5539;
+      color: #fffaf0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .github-link a:hover { background-color: #5c3d2e; }
+    footer.custom {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 0.9em;
+      color: #8d6e63;
+    }
+    footer.custom span { color: #7f5539; }
   </style>
 </head>
 <body class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-gray-100 font-body min-h-screen overflow-x-hidden">
@@ -101,11 +150,8 @@
       </div>
       <!-- Hero Content -->
       <div class="flex-1 animate-fade-in">
-        <span class="inline-block bg-gradient-to-r from-accent to-accent2 text-transparent bg-clip-text font-semibold tracking-[0.2em] uppercase text-xs mb-4">
-         
-        </span>
-        <h1 class="text-5xl md:text-7xl font-black font-display leading-tight mb-4 drop-shadow-[0_2px_16px_rgba(56,189,248,0.15)]">
-          <span class="block text-white">Anas Afroz</span>
+        <h1 class="text-5xl md:text-7xl font-black font-display leading-tight mb-4 text-white">
+          Anas Afroz
         </h1>
         <h2 class="text-2xl md:text-3xl font-display font-light tracking-widest bg-gradient-to-r from-accent2 via-accent3 to-accent bg-clip-text text-transparent mb-6">
           Aspiring Computer Scientist
@@ -125,11 +171,43 @@
     </section>
   </main>
 
+  <!-- Custom About Section -->
+  <section class="custom">
+    <h2>About Me</h2>
+    <p>I'm a passionate learner exploring the intersection of computer science, design, and innovation.</p>
+    <ul>
+      <li>💻 Web Development</li>
+      <li>🎨 Creative Design</li>
+      <li>📚 Continuous Learning</li>
+    </ul>
+  </section>
+
+  <!-- Custom Skills Section -->
+  <section class="custom skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li> C++</li>
+      <li>Python</li>
+    </ul>
+    <div class="github-link">
+      <a href="https://github.com/AnasAfroz">Visit my GitHub</a>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="mt-20 pb-8 text-center text-gray-400 text-base pl-24">
-    <span class="inline-block bg-gradient-to-r from-accent2 to-accent3 text-transparent bg-clip-text font-bold">© 2025 AnasAfroz</span>
+    <span class="inline-block bg-gradient-to-r from-accent2 to-accent3 text-transparent bg-clip-text font-bold">© <span id="year"></span> AnasAfroz</span>
     <span class="mx-2">|</span>
     <span>Designed with <span class="text-accent3">♥</span> and curiosity.</span>
   </footer>
+
+  <!-- Custom Footer -->
+  <footer class="custom">
+    <p>Thanks for visiting my portfolio! <span>Stay curious 🚀</span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
-</html>
