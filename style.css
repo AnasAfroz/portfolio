@@ -1,48 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Anas Afroz | Developer</title>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Poppins', 'ui-sans-serif', 'system-ui'],
+            body: ['Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          colors: {
+            accent: '#38bdf8',
+            accent2: '#a78bfa',
+            accent3: '#f472b6',
+          },
+          animation: {
+            'orbit': 'orbit 10s linear infinite',
+            'fade-in': 'fade-in 1.2s ease-out forwards',
+          },
+          keyframes: {
+            orbit: {
+              '0%': { transform: 'rotate(0deg) translateX(120px) rotate(0deg)' },
+              '100%': { transform: 'rotate(360deg) translateX(120px) rotate(-360deg)' },
+            },
+            'fade-in': {
+              '0%': { opacity: '0', transform: 'translateY(40px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body { font-family: 'Inter', ui-sans-serif, system-ui; }
+    h1, h2, h3, .font-display { font-family: 'Poppins', ui-sans-serif, system-ui; }
+    .glass {
+      background: rgba(255,255,255,0.10);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 1.5rem;
+      border: 1.5px solid rgba(255,255,255,0.18);
+    }
+
+    /* Additional Custom CSS */
     header p {
       font-size: 1.2em;
       color: #9e7540;
     }
-
-    section {
+    section.custom {
       max-width: 800px;
       margin: 30px auto;
-      background: #fffaf0; /* Light warm background */
+      background: #fffaf0;
       padding: 25px;
       border-radius: 15px;
       box-shadow: 0 8px 24px rgba(125, 84, 44, 0.1);
     }
-
-    h2 {
+    section.custom h2 {
       color: #7f5539;
       margin-bottom: 15px;
       font-size: 1.5em;
       border-left: 5px solid #b08968;
       padding-left: 10px;
     }
-
-    ul {
-      list-style: none;
-      padding-left: 10px;
-    }
-
-    ul li {
-      padding: 6px 0;
-    }
-
-    ul li::before {
-      content: "🌟 ";
-      margin-right: 5px;
-    }
-
-    .skills ul li::before {
-      content: "🛠️ ";
-    }
-
-    .github-link {
-      text-align: center;
-      margin-top: 20px;
-    }
-
+    ul { list-style: none; padding-left: 10px; }
+    ul li { padding: 6px 0; }
+    ul li::before { content: "🌟 "; margin-right: 5px; }
+    .skills ul li::before { content: "🛠️ "; }
+    .github-link { text-align: center; margin-top: 20px; }
     .github-link a {
       display: inline-block;
       padding: 10px 20px;
@@ -53,18 +90,125 @@
       font-weight: bold;
       transition: background-color 0.3s;
     }
-
-    .github-link a:hover {
-      background-color: #5c3d2e;
-    }
-
-    footer {
+    .github-link a:hover { background-color: #5c3d2e; }
+    footer.custom {
       text-align: center;
       padding: 30px 0 10px;
       font-size: 0.9em;
       color: #8d6e63;
     }
+    footer.custom span { color: #7f5539; }
+  </style>
+</head>
+<body class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-gray-100 font-body min-h-screen overflow-x-hidden">
 
-    footer span {
-      color: #7f5539;
-    }
+  <!-- Animated Background Gradient -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+    <div class="absolute bottom-0 right-0 w-[32rem] h-[32rem] bg-accent2/20 rounded-full blur-3xl opacity-40 animate-pulse" style="animation-delay:2s"></div>
+  </div>
+
+  <!-- Sidebar Navigation -->
+  <aside aria-label="Sidebar" class="fixed top-0 left-0 h-full w-20 flex flex-col items-center py-8 z-50 glass border-r border-white/10">
+    <a href="#" class="mb-12 group">
+      <span class="block w-12 h-12 rounded-full bg-gradient-to-tr from-accent via-accent2 to-accent3 flex items-center justify-center font-display text-2xl font-black text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6">HA</span>
+    </a>
+    <nav class="flex flex-col gap-8 mt-8">
+      <a href="#" class="group flex flex-col items-center text-accent hover:text-white transition">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0h6"></path></svg>
+        <span class="text-xs font-semibold">Home</span>
+      </a>
+      <a href="#projects" class="group flex flex-col items-center text-accent2 hover:text-white transition">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span class="text-xs font-semibold">Projects</span>
+      </a>
+      <a href="#contact" class="group flex flex-col items-center text-accent3 hover:text-white transition">
+        <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <span class="text-xs font-semibold">Contact</span>
+      </a>
+    </nav>
+    <div class="flex-1"></div>
+    <div class="mb-4 text-xs text-gray-500 rotate-90 whitespace-nowrap">SCIENTIA ET ARS</div>
+  </aside>
+
+  <!-- Hero Section -->
+  <main class="min-h-screen flex items-center justify-center pl-24">
+    <section class="w-full max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-16 py-24 px-6">
+      <!-- Geometric Visual Motif -->
+      <div class="relative flex-shrink-0">
+        <div class="absolute inset-0 w-72 h-72 rounded-full bg-gradient-to-tr from-accent/10 via-accent2/10 to-accent3/10 blur-2xl animate-pulse"></div>
+        <div class="relative w-72 h-72 flex items-center justify-center">
+          <div class="absolute inset-0 rounded-full border-2 border-accent/30 shadow-[0_0_60px_10px] shadow-accent/10"></div>
+          <div class="absolute inset-8 rounded-full border-2 border-accent2/30"></div>
+          <div class="absolute inset-16 rounded-full border-2 border-accent3/30"></div>
+          <div class="absolute left-1/2 top-1/2 w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-accent via-accent2 to-accent3 shadow-xl ring-4 ring-accent/20 transition-transform duration-300 hover:scale-110"></div>
+          <!-- Orbiting dots -->
+          <span class="absolute left-1/2 top-1/2 w-4 h-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent animate-orbit"></span>
+          <span class="absolute left-1/2 top-1/2 w-3 h-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent2 animate-orbit" style="animation-delay:2s"></span>
+          <span class="absolute left-1/2 top-1/2 w-2 h-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent3 animate-orbit" style="animation-delay:4s"></span>
+        </div>
+      </div>
+      <!-- Hero Content -->
+      <div class="flex-1 animate-fade-in">
+        <h1 class="text-5xl md:text-7xl font-black font-display leading-tight mb-4 text-white">
+          Anas Afroz
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-display font-light tracking-widest bg-gradient-to-r from-accent2 via-accent3 to-accent bg-clip-text text-transparent mb-6">
+          Aspiring Computer Scientist
+        </h2>
+        <p class="text-lg md:text-2xl text-gray-300 max-w-xl mb-8">
+          I merge <span class="text-accent font-semibold">science</span>, <span class="text-accent2 font-semibold">art</span>, and <span class="text-accent3 font-semibold">code</span> to create digital experiences that are elegant, functional, and future-ready.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="https://github.com/AnasAfroz/" class="bg-gradient-to-r from-accent to-accent2 hover:from-accent2 hover:to-accent3 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+            See Projects
+          </a>
+          <a href="#contact" class="glass border border-white/20 hover:bg-white/10 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105">
+            Let's Connect
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Custom About Section -->
+  <section class="custom">
+    <h2>About Me</h2>
+    <p>I'm a passionate learner exploring the intersection of computer science, design, and innovation.</p>
+    <ul>
+      <li>💻 Web Development</li>
+      <li>🎨 Creative Design</li>
+      <li>📚 Continuous Learning</li>
+    </ul>
+  </section>
+
+  <!-- Custom Skills Section -->
+  <section class="custom skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li> C++</li>
+      <li>Python</li>
+    </ul>
+    <div class="github-link">
+      <a href="https://github.com/AnasAfroz">Visit my GitHub</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-20 pb-8 text-center text-gray-400 text-base pl-24">
+    <span class="inline-block bg-gradient-to-r from-accent2 to-accent3 text-transparent bg-clip-text font-bold">© <span id="year"></span> AnasAfroz</span>
+    <span class="mx-2">|</span>
+    <span>Designed with <span class="text-accent3">♥</span> and curiosity.</span>
+  </footer>
+
+  <!-- Custom Footer -->
+  <footer class="custom">
+    <p>Thanks for visiting my portfolio! <span>Stay curious 🚀</span></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
